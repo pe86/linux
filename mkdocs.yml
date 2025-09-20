@@ -1,4 +1,4 @@
-copyright: Copyright © 2008-2022 the <a href="https://ts.sch.gr">Ομάδα Τεχνικής Στήριξης</a>
+copyright: Copyright © 2008-2025 the <a href="https://ts.sch.gr">Ομάδα Τεχνικής Στήριξης</a>
 dev_addr: 0.0.0.0:7101
 edit_uri: tree/main/docs
 extra_css:
@@ -16,6 +16,9 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.tabbed:
       alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - toc:
       permalink: true
       slugify: !!python/name:pymdownx.slugs.uslugify
