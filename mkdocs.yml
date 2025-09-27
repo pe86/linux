@@ -22,6 +22,8 @@ markdown_extensions:
   - toc:
       permalink: true
       slugify: !!python/name:pymdownx.slugs.uslugify
+        kwds:
+          case: lower
       title: Περιεχόμενα σελίδας
 plugins:
   - minify:
@@ -50,6 +52,8 @@ theme:
     # https://squidfunk.github.io/mkdocs-material/upgrade/#contentcodecopy
     - content.code.copy
   language: el
+  # Enable `locale: el` when it becomes available
+  # https://www.mkdocs.org/user-guide/choosing-your-theme/#mkdocs-locale
   # locale: el
   logo: stylesheets/ts-logo.png
   name: material
@@ -71,11 +75,7 @@ nav:
     - ubuntu/index.md
     - ubuntu/download.md
     - ubuntu/liveusb.md
-    - Εγκατάσταση:
-      - ubuntu/installation.md
-      - ubuntu/disk-empty.md
-      - ubuntu/disk-windows.md
-      - ubuntu/disk-linux.md
+    - ubuntu/installation.md
     - ubuntu/repositories.md
     - ubuntu/software.md
   - ΣΕΠΕΗΥ με LTSP:
