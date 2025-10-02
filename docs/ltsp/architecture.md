@@ -53,7 +53,7 @@
     Όσες σχολικές μονάδες διαθέτουν ακόμη PCs (2006 και πίσω) που μπορούν να
     λειτουργήσουν μόνο ως thin clients συστείνεται να παραμείνουν στην [18.04
     έκδοση της λύσης Ubuntu
-    LTSP](https://ts.sch.gr/docs/odigies-egkatastasis-diaxirisis) για την οποία
+    LTSP](https://ts.sch.gr/docs/odigies-egkatastasis-diaxirisis/ubuntu18-04ltsp/) για την οποία
     υπάρχει υποστήριξη μέχρι το 2022.
 
 ### Τοπικό δίκτυο
