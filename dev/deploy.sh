@@ -18,5 +18,5 @@ pip install mkdocs-with-pdf
 pip install --force-reinstall -v weasyprint==62.0
 # Use a different site_url for ts.sch.gr/wiki/linux vs pe86.github.io/linux
 ENABLE_PDF_EXPORT=1 mkdocs gh-deploy --remote-branch ts-docs --force
-#sed 's,site_url:.*,site_url: https://pe86.github.io/linux,' -i mkdocs.yml
-#ENABLE_PDF_EXPORT=1 mkdocs gh-deploy --force
+sed 's,site_url:.*,site_url: https://pe86.github.io/linux,' -i mkdocs.yml
+ENABLE_PDF_EXPORT=1 mkdocs gh-deploy --force
