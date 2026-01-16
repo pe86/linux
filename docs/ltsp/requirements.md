@@ -16,7 +16,7 @@ Ubuntu](https://ubuntu-mate.org/about/requirements/) αφού εκκινούν �
   2 GB RAM.
 - Η έκδοση 18.04 υποστηρίζει και 32bit clients με λιγότερο από 2 GB RAM.
 - Για ακόμα παλιότερους σταθμούς εργασίας, [δείτε τις
-  οδηγίες](https://ts.sch.gr/docs/odigies-egkatastasis-diaxirisis/ubuntu18-04ltsp/) για τις
+  οδηγίες](https://ts.sch.gr/docs/odigies-egkatastasis-diaxirisis/) για τις
   παλιότερες εκδόσεις Ubuntu & LTSP που υποστήριζαν και LTSP thin clients.
 
 ## Εξυπηρετητής
