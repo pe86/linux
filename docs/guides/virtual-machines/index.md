@@ -3,20 +3,20 @@
 Η Τ.Σ. του Π.Σ.Δ. έχει δημιουργήσει και συντηρεί έτοιμες εικονικές
 μηχανές:
 
-1.  [Ubuntu Bionic MATE 18.04 **32bit**](https://ts.sch.gr/repo/images/VMs/bionic-mate.squashfs)
+1. [Ubuntu Bionic MATE 18.04 **32bit**](https://ts.sch.gr/repo/images/VMs/bionic-mate.squashfs)
 
-2.  [Ubuntu Jammy MATE 22.04 **64bit**](https://ts.sch.gr/repo/images/VMs/jammy-mate.squashfs)
+2. [Ubuntu Noble Numbat 24.04 **64bit**](https://ts.sch.gr/repo/images/VMs/noble-mate.squashfs)
 
 τις οποίες μπορείτε να χρησιμοποιείτε με διάφορους τρόπους, όπως:
 
--   Αν έχετε μικτό εργαστήριο 32/64bit clients, ως **εικονικό** 32bit Λ.Σ.
+- Αν έχετε μικτό εργαστήριο 32/64bit clients, ως **εικονικό** 32bit Λ.Σ.
     ***VirtualBox*** μέσα σε **πραγματικό/φυσικό** 64bit LTSP server, χωρίς
     έτσι να χρειάζεται η αγορά/ύπαρξη δεύτερου πραγματικού LTSP server.
 
--   Ως το κύριο Λ.Σ., μετατρέποντας τον εικονικό σκληρό δίσκο `.vmdk`, σε
+- Ως το κύριο Λ.Σ., μετατρέποντας τον εικονικό σκληρό δίσκο `.vmdk`, σε
     πραγματικό partition του σκληρού σας δίσκου (**Κλωνοποίηση**).
 
--   Ως εικονικό Λ.Σ. δοκιμών (Ubuntu MATE), μέσα στο πραγματικό Λ.Σ. που ήδη έχετε.
+- Ως εικονικό Λ.Σ. δοκιμών (Ubuntu MATE), μέσα στο πραγματικό Λ.Σ. που ήδη έχετε.
 
 ## 32bit clients σε LTSP server 64bit {#32bit-clients-ltsp-64bit}
 
@@ -36,13 +36,13 @@ clients όμως θα εξυπηρετούνται από 32bit εικονικό
 
 ### Προϋποθέσεις {#32bit-clients-ltsp-64bit-conditions}
 
--   Λειτουργικό εργαστήριο με LTSP server με **64bit clients**.
--   **32bit client(s)** με τις προτεινόμενες
+- Λειτουργικό εργαστήριο με LTSP server με **64bit clients**.
+- **32bit client(s)** με τις προτεινόμενες
     [προδιαγραφές](../../ltsp/requirements.md).
 
 ### Βήματα υλοποίησης {#32bit-clients-ltsp-64bit-steps}
 
-1.  Ακολουθείτε χωρίς αλλαγές τον οδηγό [Λ.Σ. δοκιμών (Ubuntu
+1. Ακολουθείτε χωρίς αλλαγές τον οδηγό [Λ.Σ. δοκιμών (Ubuntu
     MATE)](#os-testing), ώστε να έχετε στον **64bit** LTSP server σας, μια
     Bionic MATE **32bit** εικονική μηχανή.
 
@@ -59,7 +59,7 @@ clients όμως θα εξυπηρετούνται από 32bit εικονικό
         -   Μετά το 1ο βήμα, μπορείτε να σβήσετε τη συμπιεσμένη εικονική μηχανή
             `.squashfs`, ώστε να εξοικονομήσετε χώρο στο δίσκο του LTSP server.
 
-2.  Με **κλειστή** την εικονική μηχανή, από [τερματικό](../../glossary/index.md#terminal):
+2. Με **κλειστή** την εικονική μηχανή, από [τερματικό](../../glossary/index.md#terminal):
 
     ```shell
     # Κατάλληλη "σύνδεση" του x86_32.img, ώστε να δημιουργείται από το bionic-mate-flat.vmdk
@@ -114,14 +114,14 @@ server.
 
 ### Προϋποθέσεις {#clone-via-ltsp-conditions}
 
--   Λειτουργικός LTSP server.
--   Τοπικό δίκτυο. Προτείνεται στα 1000 Mbps έτσι ώστε να γίνει πολύ γρήγορα η
+- Λειτουργικός LTSP server.
+- Τοπικό δίκτυο. Προτείνεται στα 1000 Mbps έτσι ώστε να γίνει πολύ γρήγορα η
     εγγραφή του εικονικού.
--   Υπολογιστής "στόχος" με τις προτεινόμενες
+- Υπολογιστής "στόχος" με τις προτεινόμενες
     [προδιαγραφές](../../ltsp/requirements.md).
--   Κατάλληλες ρυθμίσεις στο BIOS "στόχου", ώστε να είναι σε BIOS mode (ή
+- Κατάλληλες ρυθμίσεις στο BIOS "στόχου", ώστε να είναι σε BIOS mode (ή
     UEFI/legacy mode), γιατί και ο εικονικός `.vmdk` είναι σε BIOS/MBR mode.
--   Συμπιεσμένη εικονική μηχανή `.squashfs` μέσα στο φάκελο `VirtualBox VMs`.
+- Συμπιεσμένη εικονική μηχανή `.squashfs` μέσα στο φάκελο `VirtualBox VMs`.
 
     !!! warning "Προσοχή"
         **Μόνο την "κατεβάζετε", δεν αποσυμπιέζετε** το `.squashfs`, γιατί
@@ -131,11 +131,11 @@ server.
 
 ### Βήματα υλοποίησης {#clone-via-ltsp-steps}
 
-1.  [Εκκίνηση από το δίκτυο](../../ltsp/netboot.md) του υπολογιστή "στόχου".
+1. [Εκκίνηση από το δίκτυο](../../ltsp/netboot.md) του υπολογιστή "στόχου".
 
-2.  Σύνδεση ως `administrator` στον υπολογιστή "στόχο".
+2. Σύνδεση ως `administrator` στον υπολογιστή "στόχο".
 
-3.  Από [τερματικό](../../glossary#terminal) π.χ. ως `administrator@ltsp147`:
+3. Από [τερματικό](../../glossary#terminal) π.χ. ως `administrator@ltsp147`:
 
     !!! warning "Προσοχή"
         Η εντολή `dd` διαγράφει **όλα** τα δεδομένα του δίσκου **οριστικά**!!!
@@ -145,15 +145,15 @@ server.
     sudo swapoff -a
     # Εύρεση του "ονόματος" του τοπικού δίσκου (π.χ. sda).
     lsblk --fs
-    # Προσάρτηση του .squashfs π.χ. για το jammy-mate:
-    udisksctl loop-setup -f ~/"VirtualBox VMs"/jammy-mate.squashfs
+    # Προσάρτηση του .squashfs π.χ. για το noble-mate:
+    udisksctl loop-setup -f ~/"VirtualBox VMs"/noble-mate.squashfs
     # Εγγραφή του .vmdk, στον τοπικό δίσκο π.χ. για sda:
-    sudo dd if=/media/$USER/disk/jammy-mate-flat.vmdk of=/dev/sda bs=1M status=progress
+    sudo dd if=/media/$USER/disk/noble-mate-flat.vmdk of=/dev/sda bs=1M status=progress
     # Αποπροσάρτηση του .squashfs
     umount /media/$USER/disk
     ```
 
-4.  **Χωρίς** να κάνετε **επανεκκίνηση** τον υπολογιστή "στόχο" συνεχίζεται στο
+4. **Χωρίς** να κάνετε **επανεκκίνηση** τον υπολογιστή "στόχο" συνεχίζεται στο
     τερματικό π.χ. για `/dev/sda`:
 
     ```shell
@@ -162,12 +162,12 @@ server.
 
     Στο [GParted](../gparted/index.md) πρέπει να γίνουν δύο βασικές ενέργειες:
 
-    1.  **Αύξηση** του μεγέθους του swap partition ***/dev/sda2*** σε 4100 MB
+    1. **Αύξηση** του μεγέθους του swap partition ***/dev/sda2*** σε 4100 MB
         και **μετακίνηση** του στο τέλος του δίσκου. **Πριν** το επόμενο βήμα
         να γίνει ***Εφαρμογή όλων των εργασιών*** (εικονίδιο
         ![](../gparted/Gparted-apply-new-partition.png#inline)).
 
-    2.  **Αύξηση** του μεγέθους του linux partition ***/dev/sda1*** ώστε να
+    2. **Αύξηση** του μεγέθους του linux partition ***/dev/sda1*** ώστε να
         καταλαμβάνει όλο το διαθέσιμο δίσκο και ***Εφαρμογή όλων των
         εργασιών*** (εικονίδιο
         ![](../gparted/Gparted-apply-new-partition.png#inline)).
@@ -185,23 +185,23 @@ USB), έτσι ώστε στη συνέχεια, να τον χρησιμοπο�
 
 ### Προϋποθέσεις {#clone-via-liveusb-conditions}
 
--   [Live USB](../../ubuntu/liveusb.md).
--   [Συμπιεσμένη εικονική μηχανή](index.md) `.squashfs`, στον αρχικό κατάλογο
+- [Live USB](../../ubuntu/liveusb.md).
+- [Συμπιεσμένη εικονική μηχανή](index.md) `.squashfs`, στον αρχικό κατάλογο
     `/` του Live USB.
--   Υπολογιστής "στόχος" με τις προτεινόμενες
+- Υπολογιστής "στόχος" με τις προτεινόμενες
     [προδιαγραφές](../../ltsp/requirements.md).
--   Κατάλληλες ρυθμίσεις στο BIOS "στόχου", ώστε να είναι σε BIOS mode (ή
+- Κατάλληλες ρυθμίσεις στο BIOS "στόχου", ώστε να είναι σε BIOS mode (ή
     UEFI/legacy mode), γιατί και ο εικονικός `.vmdk` είναι σε BIOS/MBR mode.
 
 ### Βήματα υλοποίησης {#clone-via-liveusb-steps}
 
-1.  Εκκίνηση του υπολογιστή "στόχου" με τη χρήση του Live USB.
+1. Εκκίνηση του υπολογιστή "στόχου" με τη χρήση του Live USB.
 
     !!! tip ""
         Για την εκκίνηση από Live USB ισχύει ότι και στην
         [Εγκατάσταση](../../ubuntu/installation.md) του Ubuntu.
 
-2.  Από [τερματικό](../../glossary/index.md#terminal):
+2. Από [τερματικό](../../glossary/index.md#terminal):
 
     !!! warning "Προσοχή"
         Η εντολή `dd` διαγράφει **όλα** τα δεδομένα του δίσκου **οριστικά**!!!
@@ -212,18 +212,18 @@ USB), έτσι ώστε στη συνέχεια, να τον χρησιμοπο�
     swapoff -a
     # Εύρεση του "ονόματος" του τοπικού δίσκου (π.χ. sda).
     lsblk --fs
-    # Προσάρτηση του .squashfs π.χ. για το jammy-mate:
-    udisksctl loop-setup -f /isodevice/jammy-mate.squashfs
+    # Προσάρτηση του .squashfs π.χ. για το noble-mate:
+    udisksctl loop-setup -f /isodevice/noble-mate.squashfs
     # Αν το mapped έγινε στο /dev/loop6, τότε:
     udisksctl mount -b /dev/loop6
     # Εγγραφή του .vmdk, στον τοπικό δίσκο π.χ. για sda:
-    dd if=/media/$USER/disk/jammy-mate-flat.vmdk of=/dev/sda bs=1M status=progress
+    dd if=/media/$USER/disk/noble-mate-flat.vmdk of=/dev/sda bs=1M status=progress
     # Αποπροσάρτηση του .squashfs
     umount /media/$USER/disk
     exit
     ```
 
-3.  Ίδιες ενέργειες με το **βήμα 4** του οδηγού [Κλωνοποίηση μέσω LTSP
+3. Ίδιες ενέργειες με το **βήμα 4** του οδηγού [Κλωνοποίηση μέσω LTSP
     server](#clone-via-ltsp).
 
 Ο υπολογιστής "στόχος" είναι έτοιμος. Μπορείτε να κάνετε επανεκκίνηση ώστε να
@@ -234,7 +234,7 @@ USB), έτσι ώστε στη συνέχεια, να τον χρησιμοπο�
 Για να κάνετε χρήση της έτοιμης εικονικής μηχανής π.χ. της Ubuntu Bionic MATE
 18.04 **32bit**, θα πρέπει να ακολουθήσετε τα επόμενα βήματα:
 
-1.  Από [τερματικό](../../glossary/index.md#terminal):
+1. Από [τερματικό](../../glossary/index.md#terminal):
 
     ```shell
     mkdir -p ~/"VirtualBox VMs"
@@ -246,21 +246,68 @@ USB), έτσι ώστε στη συνέχεια, να τον χρησιμοπο�
     ```
 
     !!! tip ""
-        Αν χρειαστείτε την `jammy-mate`, στις εντολές όπου `bionic-mate`
-        αντικαταστήστε με `jammy-mate`.
+        Αν χρειαστείτε την `noble-mate`, στις εντολές όπου `bionic-mate`
+        αντικαταστήστε με `noble-mate`.
 
-2.  [Εγκατάσταση](../../ubuntu/software.md) του ***VirtualBox***. Μόλις
+2. [Εγκατάσταση](../../ubuntu/software.md) του ***VirtualBox***. Μόλις
     ολοκληρωθεί η εγκατάσταση, θα το βρείτε στο ***Εφαρμογές*** ▸ ***Εργαλεία
     συστήματος*** ▸ ***VirtualBox***.
 
-3.  Εισαγωγή της εικονικής μηχανής `bionic-mate.vbox` στο VirtualBox από το
+3. Εισαγωγή της εικονικής μηχανής `bionic-mate.vbox` στο VirtualBox από το
     μενού: ***Μηχανή*** ▸ ***Προσθήκη...*** ή με **`Ctrl`**+**`A`**.
 
     !!! tip ""
         Το αρχείο `.vbox` βρίσκεται μέσα στον αντίστοιχο φάκελο του `VirtualBox
         VMs`.
 
-4.  Πριν επιλέξετε ***Εκκίνηση*** θα πρέπει να ελέγξετε τις ***Ρυθμίσεις*** της
+4. Πριν επιλέξετε ***Εκκίνηση*** θα πρέπει να ελέγξετε τις ***Ρυθμίσεις*** της
+    εικονικής μηχανής. Το κυριότερο είναι το μέγεθος της μνήμης **RAM** να
+    είναι στα **προτεινόμενα όρια**.
+
+    [![](VT-x_BIOS.png)](VT-x_BIOS.png)
+    Σε περίπτωση που κατά την ***Εκκίνηση*** εμφανιστεί το μήνυμα της διπλανής
+    εικόνας, θα πρέπει από το BIOS/UEFI να ενεργοποιήσετε την επιλογή ***Intel
+    Virtualization Technology (VT-x)***. Το αντίστοιχο μήνυμα για AMD CPU θα
+    είναι: `AMD-V is disabled in the BIOS`.
+
+## Λ.Σ. δοκιμών (Windows 11) {#os-testing-windows}
+
+Για να κάνετε χρήση της έτοιμης εικονικής μηχανής π.χ. της Ubuntu Bionic MATE
+18.04 **32bit** σε περιβάλλον MS Windows 10, θα πρέπει να ακολουθήσετε τα επόμενα βήματα:
+
+1. Από το `Powershell`:
+
+    ```powershell
+	# Δημιουργία καταλόγου για τις εικονικές μηχανές.
+    mkdir ~\'VirtualBox VMs' -ea 0
+    cd ~\'VirtualBox VMs'
+    # Download της συμπιεσμένης εικονικής μηχανής.
+	Start-BitsTransfer https://ts.sch.gr/repo/images/VMs/bionic-mate.squashfs
+    # Εγκατάσταση απαραίτητων λογισμικών.
+	winget install --id=7zip.7zip --exact --silent --accept-package-agreements --accept-source-agreements ;`
+	     winget install --id=Oracle.VirtualBox --exact --silent --accept-package-agreements --accept-source-agreements
+	# Αποσυμπίεση στο φάκελο VirtualBox VMs/bionic-mate.
+	.'C:\Program Files\7-Zip\7z' x bionic-mate.squashfs -obionic-mate
+    ```
+
+    !!! tip ""
+        Αν για κάποιο λόγο το [`winget`](https://ts.sch.gr/wiki/windows/software/#winget) δεν υπάρχει στο σύστημά σας, δοκιμάστε χειροκίνητη εγκατάσταση των απαραίτητων λογισμικών [`7zip`](https://ts.sch.gr/wiki/windows/software/7zip), [`VirtualBox`](https://ts.sch.gr/wiki/windows/software/advanced/virtualbox/)).
+
+2. Μόλις ολοκληρωθούν τα παραπάνω, εκτελέστε το ***VirtualBox*** από το μενού
+    ***Έναρξη*** ▸ ***Oracle VirtualBox*** ▸ ***Oracle VirtualBox***.
+
+3. Εισαγωγή της εικονικής μηχανής `bionic-mate.vbox` στο VirtualBox από το
+    μενού: ***Μηχανή*** ▸ ***Προσθήκη...*** ή με **`Ctrl`**+**`A`**.
+
+    !!! tip ""
+        Το αρχείο `.vbox` βρίσκεται μέσα στον αντίστοιχο φάκελο του `VirtualBox
+        VMs`.
+
+    !!! tip ""
+        Αν χρειαστείτε την `noble-mate`, στις εντολές όπου `bionic-mate`
+        αντικαταστήστε με `noble-mate`.
+
+4. Πριν επιλέξετε ***Εκκίνηση*** θα πρέπει να ελέγξετε τις ***Ρυθμίσεις*** της
     εικονικής μηχανής. Το κυριότερο είναι το μέγεθος της μνήμης **RAM** να
     είναι στα **προτεινόμενα όρια**.
 
